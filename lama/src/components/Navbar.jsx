@@ -4,11 +4,11 @@ import { Badge } from '@material-ui/core';
 
 // Styles using styled components
 const Container = styled.div`
-    height: 60px;
+    /* height: 60px; */
 `
 
 const Wrapper = styled.div`
-    padding: 10px 20px;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
 `
