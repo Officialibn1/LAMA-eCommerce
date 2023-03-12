@@ -8,7 +8,7 @@ const Container = styled.div`
 `
 
 const Wrapper = styled.div`
-    padding: 0 20px;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
 `
