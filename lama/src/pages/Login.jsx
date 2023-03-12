@@ -1,6 +1,7 @@
 
 
 import styled from 'styled-components';
+import { Mobile } from '../Responsive';
 
 const Container = styled.div`
     width: 100vw;
@@ -16,12 +17,20 @@ const Wrapper = styled.div`
     padding: 20px 40px;
     box-shadow: 0px 0px 10px 5px rgba(0, 128, 128, 0.335);
 
+    ${Mobile({
+        width: '80%',
+    })}
+
     header{
         font-size: 35px;
         text-align: center;
         margin-bottom: 15px;
         font-weight: 300;
         color: teal;
+
+        ${Mobile({
+            fontSize: '30px'
+        })}
     }
 
     h1{
@@ -44,6 +53,8 @@ const Wrapper = styled.div`
             padding: 5px;
             padding-left: 15px;
             outline: none;
+            border: 1px solid grey;
+            border-radius: 0px;
         }
         
         p{

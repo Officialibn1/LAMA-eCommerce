@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Mobile } from '../Responsive';
 
 const Container = styled.div`
     width: 100vw;
@@ -6,6 +7,10 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    ${Mobile({
+        padding: '50px 0'
+    })}
 `
 
 const Wrapper = styled.div`
@@ -13,6 +18,10 @@ const Wrapper = styled.div`
     background-color: #fff;
     padding: 10px 40px;
     box-shadow: 0px 0px 10px 5px rgba(0, 128, 128, 0.335);
+
+    ${Mobile({
+        width: '80%'
+    })}
 
     header{
         font-size: 35px;
@@ -25,6 +34,10 @@ const Wrapper = styled.div`
     h1{
         font-size: 30px;
         font-weight: 300;
+
+        ${Mobile({
+            fontSize: '26px'
+        })}
     }
 
     form{
@@ -42,6 +55,9 @@ const Wrapper = styled.div`
             padding: 5px;
             padding-left: 15px;
             outline: none;
+            border: 1px solid grey;
+            border-radius: 0px;
+            
         }
         
         p{
@@ -54,6 +70,8 @@ const Wrapper = styled.div`
             margin: 8px 0;
             border: 2px solid rgb(0, 128, 128);
             cursor: pointer;
+            background: transparent;
+            color: #000;
 
         }
     }

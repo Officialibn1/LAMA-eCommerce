@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Send } from "@material-ui/icons";
+import { Mobile } from '../Responsive';
 
 
 const Container = styled.div`
@@ -10,15 +11,28 @@ const Container = styled.div`
     justify-content: center;
     flex-direction: column;
 
+    ${Mobile({
+        height: '35vh'
+    })}
+
     h1{
         font-size: 60px;
         opacity: .85;
         font-weight: 400;
+
+        ${Mobile({
+            fontSize: '50px'
+        })}
     }
 
     p{
         font-size: 22px;
         margin: 20px 0;
+
+        ${Mobile({
+            fontSize: '18px',
+            textAlign: 'center'
+        })}
     }
 
     div{
@@ -28,11 +42,19 @@ const Container = styled.div`
         height: 40px;
         border: 1px solid grey;
 
+        ${Mobile({
+            width: '80%'
+        })}
+
         input{
             padding-left: 20px;
             flex: 9;
             border: none;
             outline: none;
+
+            ${Mobile({
+                flex: 8
+            })}
         }
 
         button{
@@ -41,6 +63,10 @@ const Container = styled.div`
             background-color: teal;
             cursor: pointer;
             color: #fff;
+
+            ${Mobile({
+                flex: 2
+            })}
         }
     }
 

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import { Mobile } from '../Responsive';
 
 const Container = styled.div`
     
@@ -21,12 +22,22 @@ const Top = styled.div`
     justify-content: space-between;
     padding: 10px 20px;
 
+    ${Mobile({
+        padding: '10px 0'
+    })}
+
     button{
         padding: 5px 10px;
         font-weight: 500;
         cursor: pointer;
         background: transparent;
         border: 2px solid teal;
+        color: #000;
+        
+        ${Mobile({
+            fontSize: '14px',
+            padding: '5px'
+        })}
     }
 
     div{
@@ -37,12 +48,20 @@ const Top = styled.div`
             margin: 0 10px;
             opacity: .9;
             cursor: pointer;
+
+            ${Mobile({
+                fontSize: '16px'
+            })}
         }
     }
 `
 
 const Bottom = styled.div`
     display: flex;
+
+    ${Mobile({
+        flexDirection: 'column'
+    })}
 `
 
 const Info = styled.div`
@@ -51,6 +70,11 @@ const Info = styled.div`
 
 const Product = styled.div`
     display: flex;
+
+    ${Mobile({
+        flexDirection: 'column',
+        margin: '15px 0'
+    })}
 `
 
 const ProductDetails = styled.div`
@@ -59,14 +83,29 @@ const ProductDetails = styled.div`
     justify-content: space-between;
     padding-right: 30px;
 
+    ${Mobile({
+        flexDirection: 'column'
+    })}
+
     img{
         width: 30%;
+
+        ${Mobile({
+            width: '100%'
+        })}
     }
 
     div{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+
+        span{
+            ${Mobile({
+                margin: '12px 0',
+                fontSize: '20px'
+            })}
+        }
     }
 `
 
@@ -88,12 +127,20 @@ const PriceDetails = styled.div`
         display: flex;
         margin-bottom: 20px;
 
+        ${Mobile({
+            margin: '20px 0'
+        })}
+
         div{
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 25px;
             margin: 0 10px;
+
+            ${Mobile({
+                margin: '0px 20px'
+            })}
         }
     }
 

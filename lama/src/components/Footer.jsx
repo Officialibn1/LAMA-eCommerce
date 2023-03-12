@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 import { Facebook, Instagram, LinkedIn, MailOutline, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
+import { Mobile } from '../Responsive';
 
 
 const Container = styled.div`
     display: flex;
+
+    ${Mobile({
+        flexDirection: 'column'
+    })}
 `
 const Left = styled.div`
     flex: 1;

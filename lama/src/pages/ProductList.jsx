@@ -5,6 +5,7 @@ import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import {  } from "@material-ui/icons";
+import { Mobile } from '../Responsive';
 
 
 const Container = styled.div`
@@ -20,15 +21,35 @@ const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    ${Mobile({
+        alignItems: 'flex-start',
+    })}
 `
 
 const Filter = styled.div`
 
+    ${Mobile({
+        display: 'flex',
+        flexDirection: 'column',  
+          
+    })}
 
     select{
         padding: 5px;
-        margin-left: 10px
+        margin-left: 10px;
+
+        ${Mobile({
+            margin: '5px 0',
+            border: '1px solid grey'
+        })}
         
+    }
+
+    span{
+        ${Mobile({
+            fontSize: '20px'
+        })}
     }
     
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Mobile } from "../Responsive";
 
 const Container = styled.div`
     flex: 1;
@@ -7,10 +8,15 @@ const Container = styled.div`
     position: relative;
 
 
+
     img{
         height: 100%;
         width: 100%;
         object-fit: cover;
+        
+        ${Mobile({
+            height: '40vh'
+        })}
     }
 `
 
@@ -30,6 +36,11 @@ const Info = styled.div`
         color: #fff;
         margin: 20px 0;
         font-weight: 600;
+
+        ${Mobile({
+            fontWeight: '400',
+            fontSize: '25px'
+        })}
     }
 
     button{

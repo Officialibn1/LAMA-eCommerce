@@ -4,6 +4,7 @@ import Announcement from '../components/Announcement';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import { Add, Remove } from '@material-ui/icons';
+import { Mobile } from '../Responsive';
 
 
 
@@ -15,31 +16,55 @@ const Wrapper = styled.div`
     display: flex;
     height: 90vh;
     padding: 50px;
+
+    ${Mobile({
+        height: 'auto',
+        padding: "10px 15px",
+        flexDirection: 'column',
+        width: '100vw'
+    })}
 `
 const ImgContainer = styled.div`
     height: 100%;
     width: 100%;
-    flex: 1;
+    flex: 1;   
 
     img{
         height: 100%;
         object-fit: cover;
         margin: 0 auto;
+
+        ${Mobile({
+            height: '50vh',
+            width: '100%'
+        })}
     }
 `
 const DescContainer = styled.div`
     flex: 1;
     padding: 0 50px;
 
+    ${Mobile({
+        padding: '0 10px'
+    })}
+
     h2{
         font-size: 40px;
         font-weight: 200;
+
+        ${Mobile({
+            fontSize: '35px'
+        })}
     }
 
     p{
         margin: 40px 0;
         font-size: 22px;
         letter-spacing: 2px;
+
+        ${Mobile({
+            margin: '20px 0'
+        })}
     }
 
     span{
@@ -50,6 +75,11 @@ const DescContainer = styled.div`
 
 const FilterContainer = styled.div`
     margin: 20px 0;
+
+    ${Mobile({
+        display: 'flex',
+        justifyContent: 'space-between'
+    })}
 `
 const Filter = styled.div`
     display: flex;
@@ -78,6 +108,12 @@ const FilterColor = styled.div`
 
 const AmountContainer = styled.div`
 
+    ${Mobile({
+        display: 'flex',
+        justifyContent: 'space-between',
+        height: '60px'
+    })}
+
     div{
         display: flex;
         align-items: center;
@@ -94,6 +130,10 @@ const AmountContainer = styled.div`
             align-items: center;
             justify-content: center;
             border: 1px solid teal;
+
+            ${Mobile({
+                margin: '0 20px'
+            })}
         }
     }
 
